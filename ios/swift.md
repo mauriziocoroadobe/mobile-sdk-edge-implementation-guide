@@ -24,7 +24,7 @@ pod 'AEPIdentity', '~> 4.0'
 pod 'AEPSignal', '~>4.0'
 pod 'AEPLifecycle', '~>4.0'
 pod 'AEPUserProfile', '~> 4.0'
-
+pod 'AEPOptimize', '~> 4.0'
 ```
 
 ## 1.2 Add Initialization Code (Sample):
@@ -39,6 +39,7 @@ import AEPLifecycle
 import AEPSignal
 import AEPServices
 import AEPUserProfile
+import AEPOptimize
 ```   
     
 In Xcode, find your didFinishLaunchingWithOptions and add following code to configure the environment and register the required frameworks with Mobile Core:
@@ -54,7 +55,8 @@ let extensions = [
       AEPIdentity.Identity.self,
       Lifecycle.self,
       Signal.self,
-      UserProfile.self
+      UserProfile.self,
+      Optimize.self,
 ]
 MobileCore.registerExtensions(
   extensions,
