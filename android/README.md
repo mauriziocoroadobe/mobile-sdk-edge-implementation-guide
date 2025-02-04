@@ -33,6 +33,7 @@ implementation 'com.adobe.marketing.mobile:identity:2.+'
 implementation 'com.adobe.marketing.mobile:lifecycle:2.+'
 implementation 'com.adobe.marketing.mobile:signal:2.+'
 implementation 'com.adobe.marketing.mobile:userprofile:2.+'
+ implementation 'com.adobe.marketing.mobile:optimize:2.+'
 ```
 - Add Initialization Code
 ```java
@@ -48,6 +49,10 @@ import com.adobe.marketing.mobile.Signal;
 import com.adobe.marketing.mobile.UserProfile;
 import com.adobe.marketing.mobile.edge.consent.Consent;
 import com.adobe.marketing.mobile.edge.identity.Identity;
+import com.adobe.marketing.mobile.optimize.DecisionScope;
+import com.adobe.marketing.mobile.optimize.Offer;
+import com.adobe.marketing.mobile.optimize.Optimize;
+import com.adobe.marketing.mobile.optimize.OptimizeProposition;
 import java.util.Arrays;
 import java.util.List;
 ```
@@ -69,6 +74,8 @@ Edge.registerExtension();
 UserProfile.registerExtension();
 Lifecycle.registerExtension();
 Signal.registerExtension();
+Optimize.registerExtension();
+
 MobileCore.start(new AdobeCallback () {
 	@Override
 	public void call(Object o) {
