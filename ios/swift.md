@@ -168,6 +168,7 @@ var customData : [String: Any] = []
 
 // TRACKING DATA
 // Include here the content of the 'customData' and 'xdmData' objects, as per specification.
+all data should be set inside a node named _tenant and appended inside XDM node. The same structure have to be replicated on XDM schema in Data Collection
 
 //Create an Experience Event
 let experienceEvent = ExperienceEvent(xdm: xdmData, data: customData)
